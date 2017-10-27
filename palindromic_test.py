@@ -15,6 +15,10 @@ class Test_is_palindromic(unittest.TestCase):
 
 class Test_base10_to_baseN(unittest.TestCase):
 
+    def test_0_in_base2(self):
+        result = palindromic.base10_to_baseN(0, 2)
+        self.assertEqual(result, [0])
+
     def test_17_in_base2(self):
         result = palindromic.base10_to_baseN(17, 2)
         self.assertEqual(result, [1, 0, 0, 0, 1])
